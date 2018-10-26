@@ -109,63 +109,20 @@ import AccordionHeaderContentStyle from "./screens/accordion/accordion-header-co
 import AccordionCustomHeaderContent from "./screens/accordion/accordion-custom-header-content";
 
 import Home from "./screens/home/";
-import Anatomy from "./screens/anatomy/";
-import Footer from "./screens/footer/";
-import NHBadge from "./screens/badge/";
-import NHButton from "./screens/button/";
 import NHCard from "./screens/card/";
-import NHCheckbox from "./screens/checkbox/";
-import NHDeckSwiper from "./screens/deckswiper/";
-import NHFab from "./screens/fab/";
-import NHForm from "./screens/form/";
 import TextArea from "./screens/form/textArea";
-import NHIcon from "./screens/icon/";
-import ListSwipe from "./screens/listSwipe/";
-import NHLayout from "./screens/layout/";
 import NHList from "./screens/list/";
-import NHRadio from "./screens/radio/";
-import NHSearchbar from "./screens/searchbar/";
-import NHSpinner from "./screens/spinner/";
-import NHPicker from "./screens/picker/";
-import NHTab from "./screens/tab/";
-import NHThumbnail from "./screens/thumbnail/";
-import NHTypography from "./screens/typography/";
 import SideBar from "./screens/sidebar";
-import Segment from "./screens/segment";
-import NHToast from "./screens/toast/";
-import Actionsheet from "./screens/actionsheet";
-import NHAccordion from "./screens/accordion/";
-import NHDatePicker from "./screens/datepicker/";
+import NursingHouse from "./views/nursinghouse";
+import Resident from "./views/resident";
 
 const Drawer = DrawerNavigator(
   {
     Home: { screen: Home },
-    Anatomy: { screen: Anatomy },
-    Header: { screen: Header },
-    Footer: { screen: Footer },
-    NHBadge: { screen: NHBadge },
-    NHButton: { screen: NHButton },
+      NursingHouse: { screen: NursingHouse },
+      Resident: { screen: Resident },
     NHCard: { screen: NHCard },
-    NHCheckbox: { screen: NHCheckbox },
-    NHDeckSwiper: { screen: NHDeckSwiper },
-    NHFab: { screen: NHFab },
-    NHForm: { screen: NHForm },
-    NHIcon: { screen: NHIcon },
-    NHLayout: { screen: NHLayout },
     NHList: { screen: NHList },
-    ListSwipe: { screen: ListSwipe },
-    NHRadio: { screen: NHRadio },
-    NHSearchbar: { screen: NHSearchbar },
-    NHSpinner: { screen: NHSpinner },
-    NHPicker: { screen: NHPicker },
-    NHTab: { screen: NHTab },
-    NHThumbnail: { screen: NHThumbnail },
-    NHTypography: { screen: NHTypography },
-    Segment: { screen: Segment },
-    NHToast: { screen: NHToast },
-    Actionsheet: { screen: Actionsheet },
-    NHAccordion: { screen: NHAccordion },
-    NHDatePicker: { screen: NHDatePicker }
   },
   {
     initialRouteName: "Home",

@@ -11,11 +11,6 @@ class Home extends Component {
   render() {
     return (
       <Container>
-        <StatusBar barStyle="light-content" />
-        <ImageBackground source={launchscreenBg} style={styles.imageContainer}>
-          <View style={styles.logoContainer}>
-            <ImageBackground source={launchscreenLogo} style={styles.logo} />
-          </View>
           <View
             style={{
               alignItems: "center",
@@ -23,20 +18,15 @@ class Home extends Component {
               backgroundColor: "transparent"
             }}
           >
-            <H3 style={styles.text}>App to showcase</H3>
-            <View style={{ marginTop: 8 }} />
-            <H3 style={styles.text}>NativeBase components</H3>
-            <View style={{ marginTop: 8 }} />
           </View>
           <View style={{ marginBottom: 80 }}>
             <Button
               style={{ backgroundColor: "#6FAF98", alignSelf: "center" }}
               onPress={() => this.props.navigation.navigate("DrawerOpen")}
             >
-              <Text>Lets Go!</Text>
+              <Text>Open Menu</Text>
             </Button>
           </View>
-        </ImageBackground>
       </Container>
     );
   }
