@@ -30,7 +30,11 @@
     ]
   },
   "dependencies": {
+    "apollo-boost": "^0.1.19",
     "color": "1.0.3",
+    "cors": "^2.8.4",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
     "lodash": "4.17.10",
     "moment": "2.13.0",
     "native-base": "https://github.com/GeekyAnts/NativeBase#master",

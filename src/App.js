@@ -2,6 +2,7 @@ import React from "react";
 import { Root } from "native-base";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 
+
 import Header from "./screens/Header/";
 import Header1 from "./screens/Header/1";
 import Header2 from "./screens/Header/2";
@@ -113,13 +114,21 @@ import NHCard from "./screens/card/";
 import TextArea from "./screens/form/textArea";
 import NHList from "./screens/list/";
 import SideBar from "./screens/sidebar";
-import NursingHouse from "./views/nursinghouse";
+import NursingHome from "./views/nursinghome";
+import NursingHomeCreate from "./views/nursinghome/register";
+import NursingHomeShow from "./views/nursinghome/show";
+import NursingHomeEdit from "./views/nursinghome/edit";
+import ResidentCreate from "./views/resident/register";
 import Resident from "./views/resident";
 
 const Drawer = DrawerNavigator(
   {
     Home: { screen: Home },
-      NursingHouse: { screen: NursingHouse },
+      NursingHome: { screen: NursingHome },
+      NursingHomeCreate: { screen: NursingHomeCreate },
+      NursingHomeShow: { screen: NursingHomeShow },
+      NursingHomeEdit: { screen: NursingHomeEdit },
+      ResidentCreate: { screen: ResidentCreate },
       Resident: { screen: Resident },
     NHCard: { screen: NHCard },
     NHList: { screen: NHList },

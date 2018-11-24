@@ -1,4 +1,5 @@
 import React from 'react';
+const shweta = require("../../../assets/contacts/shweta.png");
 import {
     Container,
     Header,
@@ -16,26 +17,24 @@ import {
 } from "native-base";
 
 const Resident = (props) => (
-    <List
-        <ListItem>
-            <Left>
-                <Thumbnail   />
-            </Left>
-            <Body>
-            <Text>
-                {props.resident.contact_name}
-            </Text>
-            <Text >
-                {props.resident.total_amount}
-            </Text>
-            </Body>
-            <Right>
-                <Button transparent>
-                    <Text>View</Text>
+    <ListItem thumbnail>
+        <Left>
+            <Thumbnail square source={shweta} />
+        </Left>
+        <Body>
+        <Text>
+            {props.resident.name}
+        </Text>
+        <Text numberOfLines={1} note>
+        {props.resident._id}
+        </Text>
+        </Body>
+        <Right>
+            <Button transparent>
+                <Text>View</Text>
                 </Button>
-            </Right>
-        </ListItem>
-        />
-    );
+        </Right>
+    </ListItem>
+);
 
 export default Resident;

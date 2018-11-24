@@ -12,7 +12,7 @@ import {
   Badge
 } from "native-base";
 import styles from "./style";
-import NursingHouse from "../../views/nursinghouse";
+import NursingHouse from "../../views/nursinghome";
 import Resident from "../../views/resident";
 
 const drawerCover = require("../../../assets/drawer-cover.png");
@@ -20,7 +20,7 @@ const drawerImage = require("../../../assets/logo-kitchen-sink.png");
 const datas = [
   {
     name: "Hogares Gediatricos",
-    route: "NursingHouse",
+    route: "NursingHome",
     icon: "keypad",
     bg: "#B89EF5",
     types: "8"
@@ -32,20 +32,6 @@ const datas = [
     bg: "#5DCEE2",
     types: "8"
   },
-    {
-        name: "Card",
-        route: "NHCard",
-        icon: "keypad",
-        bg: "#B89EF5",
-        types: "8"
-    },
-    {
-        name: "List",
-        route: "NHList",
-        icon: "lock",
-        bg: "#5DCEE2",
-        types: "8"
-    },
 ];
 
 class SideBar extends Component {

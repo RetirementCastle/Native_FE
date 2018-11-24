@@ -17,15 +17,14 @@ import {
     Right
 } from "native-base";
 
-import Resident from './Resident';
+import NursingHome from './NursingHome';
 
-const Residents = () => (
+const NursingHomes = () => (
     <Query query={gql`
         {
-          residents{
+          nursinghomes{
             name
-            _id
-            birth_date
+            idnursinghome
           }
         }
     `}
@@ -34,11 +33,12 @@ const Residents = () => (
             if (loading) return <Text>Loading ...</Text>;
             if (error) return <Text>Error :(</Text>;
 
-            return data.residents.map((currentResident) => (
-                <Resident resident={currentResident} />
+            return data.nursinghomes.map((currentNursingHome) => (
+                <NursingHome nursinghome={currentNursingHome} />
             ));
         }}
     </Query>
+
 );
 
-export default Residents;
+export default NursingHomes;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-import Residents from './Residents';
+import ResidentRegister from './ResidentRegister';
 import {
     Container,
     Header,
@@ -16,23 +16,19 @@ import {
     IconNB
 } from "native-base";
 import styles from "./styles";
-import ResidentCreate from "./register";
 
 const datas = [
     {
-        route: "ResidentCreate",
-        text: "Nuevo"
-    },
-    {
-        route: "NursingHomeShow",
-        text: "Editar"
+        route: "NHBasicList",
+        text: "Basic List"
     }
 ];
+
 const client = new ApolloClient({
     uri: "http://35.199.81.116:4000/graphql"
 });
 
-class Resident extends Component {
+class CreateResident extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -50,30 +46,20 @@ class Resident extends Component {
                         </Button>
                     </Left>
                     <Body>
-                    <Title>Residentes</Title>
+                    <Title>Resident</Title>
                     </Body>
                     <Right />
                 </Header>
 
                 <Content>
                     <ApolloProvider client={client}>
-                        <Residents />
+                        <ResidentRegister />
                     </ApolloProvider>
 
                 </Content>
-                <Fab
-                    active={this.state.active}
-                    direction="up"
-                    containerStyle={{}}
-                    style={{ backgroundColor: "#5067FF" }}
-                    position="bottomRight"
-                    onPress = {() => this.props.navigation.navigate(datas[0].route)}
-                >
-                    <IconNB name="md-share" />
-                </Fab>
             </Container>
         );
     }
 }
 
-export default Resident;
+export default CreateResident;

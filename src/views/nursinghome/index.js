@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { Image } from "react-native";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-import Residents from './Residents';
+import NursingHomes from './NursingHomes';
 import {
     Container,
     Header,
@@ -9,6 +10,10 @@ import {
     Content,
     Button,
     Icon,
+    Card,
+    CardItem,
+    Text,
+    Thumbnail,
     Left,
     Body,
     Fab,
@@ -16,11 +21,10 @@ import {
     IconNB
 } from "native-base";
 import styles from "./styles";
-import ResidentCreate from "./register";
-
+import NursingHomeCreate from "./register";
 const datas = [
     {
-        route: "ResidentCreate",
+        route: "NursingHomeCreate",
         text: "Nuevo"
     },
     {
@@ -28,11 +32,15 @@ const datas = [
         text: "Editar"
     }
 ];
+
+const logo = require("../../../assets/logo.png");
+const cardImage = require("../../../assets/drawer-cover.png");
+
 const client = new ApolloClient({
     uri: "http://35.199.81.116:4000/graphql"
 });
 
-class Resident extends Component {
+class NursingHome extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -50,14 +58,15 @@ class Resident extends Component {
                         </Button>
                     </Left>
                     <Body>
-                    <Title>Residentes</Title>
+                    <Title>Casa Gediatricas</Title>
                     </Body>
                     <Right />
                 </Header>
 
-                <Content>
+                <Content padder>
+
                     <ApolloProvider client={client}>
-                        <Residents />
+                        <NursingHomes />
                     </ApolloProvider>
 
                 </Content>
@@ -71,9 +80,19 @@ class Resident extends Component {
                 >
                     <IconNB name="md-share" />
                 </Fab>
+                <Fab
+                    active={this.state.active}
+                    direction="up"
+                    containerStyle={{}}
+                    style={{ backgroundColor: "#5067FF" }}
+                    position="bottomLeft"
+                    onPress = {() => this.props.navigation.navigate(datas[1].route, { RegisterTest: 1 })}
+                >
+                    <IconNB name="md-share" />
+                </Fab>
             </Container>
         );
     }
 }
 
-export default Resident;
+export default NursingHome;
