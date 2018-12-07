@@ -44,8 +44,8 @@ class NursingHomeRegister extends Component {
                 />
                 { this.state.isLoading ? ( <ActivityIndicator styleAttr='Large'/> ) : (<Button
                     onPress={() => this.createNursingHome()}
-                    title="Create User"
-                    color="#841584"
+                    title="Registrar"
+                    color="#2c3e50"
                 />)}
 
             </View>
@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
     },
     welcome: {
         fontSize: 20,

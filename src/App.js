@@ -120,10 +120,12 @@ import NursingHomeShow from "./views/nursinghome/show";
 import NursingHomeEdit from "./views/nursinghome/edit";
 import ResidentCreate from "./views/resident/register";
 import Resident from "./views/resident";
+import Auth from "./views/auth";
 
 const Drawer = DrawerNavigator(
   {
     Home: { screen: Home },
+      Auth: { screen: Auth },
       NursingHome: { screen: NursingHome },
       NursingHomeCreate: { screen: NursingHomeCreate },
       NursingHomeShow: { screen: NursingHomeShow },
@@ -134,7 +136,7 @@ const Drawer = DrawerNavigator(
     NHList: { screen: NHList },
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: "Auth",
     contentOptions: {
       activeTintColor: "#e91e63"
     },

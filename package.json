@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "apollo-boost": "^0.1.19",
+    "axios": "^0.18.0",
     "color": "1.0.3",
     "cors": "^2.8.4",
     "graphql": "^14.0.2",

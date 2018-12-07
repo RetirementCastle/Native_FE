@@ -24,7 +24,7 @@ import { ApolloProvider } from "react-apollo";
 const cardImage = require("../../../assets/drawer-cover.png");
 
 const client = new ApolloClient({
-    uri: "http://35.199.81.116:4000/graphql"
+    uri: "http://35.199.81.116/graphql"
 });
 
 const datas = [
@@ -73,7 +73,7 @@ class NursingHome extends Component {
             </Text>
             </Body>
             <Right>
-                <Button
+                <Button  style={{ backgroundColor: "#2c3e50" }}
                         onPress = {() => remove(this.props)}>
                     <Text>Borrar</Text>
                 </Button>

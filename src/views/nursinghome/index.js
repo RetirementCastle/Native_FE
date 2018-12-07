@@ -37,7 +37,7 @@ const logo = require("../../../assets/logo.png");
 const cardImage = require("../../../assets/drawer-cover.png");
 
 const client = new ApolloClient({
-    uri: "http://35.199.81.116:4000/graphql"
+    uri: "http://35.199.81.116/graphql"
 });
 
 class NursingHome extends Component {
@@ -51,7 +51,7 @@ class NursingHome extends Component {
     render() {
         return (
             <Container style={styles.container}>
-                <Header>
+                <Header style={{ backgroundColor: "#2c3e50" }} >
                     <Left>
                         <Button transparent onPress={() => this.props.navigation.goBack()}>
                             <Icon name="arrow-back" />
@@ -74,7 +74,7 @@ class NursingHome extends Component {
                     active={this.state.active}
                     direction="up"
                     containerStyle={{}}
-                    style={{ backgroundColor: "#5067FF" }}
+                    style={{ backgroundColor: "#2c3e50" }}
                     position="bottomRight"
                     onPress = {() => this.props.navigation.navigate(datas[0].route)}
                 >
@@ -84,7 +84,7 @@ class NursingHome extends Component {
                     active={this.state.active}
                     direction="up"
                     containerStyle={{}}
-                    style={{ backgroundColor: "#5067FF" }}
+                    style={{ backgroundColor: "#2c3e50" }}
                     position="bottomLeft"
                     onPress = {() => this.props.navigation.navigate(datas[1].route, { RegisterTest: 1 })}
                 >

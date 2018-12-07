@@ -29,7 +29,7 @@ const datas = [
     }
 ];
 const client = new ApolloClient({
-    uri: "http://35.199.81.116:4000/graphql"
+    uri: "http://35.199.81.116/graphql"
 });
 
 class Resident extends Component {
@@ -43,7 +43,7 @@ class Resident extends Component {
     render() {
         return (
             <Container style={styles.container}>
-                <Header>
+                <Header style={{ backgroundColor: "#2c3e50" }}>
                     <Left>
                         <Button transparent onPress={() => this.props.navigation.goBack()}>
                             <Icon name="arrow-back" />
